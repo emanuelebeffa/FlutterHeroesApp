@@ -1,0 +1,26 @@
+preserve_hierarchy: true # maintain the project structure
+pull_request_title: "chore: update translations"
+pull_request_labels:
+  - translations # pull request label title
+
+files:
+  - source: /lib/l10n/locales/app_en.arb # this is needed to the Flutter project
+    dest: app.arb # understand what does this
+    translation: /lib/l10n/locales/app_%two_letters_code%.arb # where translations are copied
+    update_option: update_as_unapproved # to make an admin approve the translations?
+
+
+  - source: /ios/Runner/en.lproj/Localizable.strings # this is needed to the iOS project
+    dest: /ios/app.strings
+    translation: /ios/Runner/%two_letters_code%.lproj/Localizable.strings
+    update_option: update_as_unapproved
+
+  - source: /ios/Runner/en.lproj/InfoPlist.strings # this is needed to the iOS plist
+    dest: /ios/info.strings
+    translation: /ios/Runner/%two_letters_code%.lproj/InfoPlist.strings
+    update_option: update_as_unapproved
+
+  - source: /android/app/src/main/res/values/strings.xml # this is needed to the Android project
+    dest: android.xml
+    translation: /android/app/src/main/res/values-%two_letters_code%/strings.xml
+    update_option: update_as_unapproved

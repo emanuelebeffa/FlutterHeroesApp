@@ -1,6 +1,3 @@
-
-
-
 import 'app_localizations.dart';
 
 /// The translations for English (`en`).
@@ -14,5 +11,5 @@ class AppLocalizationsEn extends AppLocalizations {
   String get helloFlutter => 'Hello, Flutter Heroes!';
 
   @override
-  String get hello => 'Hello';
+  String get hello => 'Whazzup, bro?';
 }

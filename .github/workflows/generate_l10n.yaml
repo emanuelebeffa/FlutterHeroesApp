@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - "l10n_**"
-    paths:
-      - "lib/l10n"
 
 concurrency: 
   group: generate-l10n-${{ github.ref }}

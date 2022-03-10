@@ -1,5 +1,6 @@
 {
     "helloWorld": "Hello, world!",
     "helloFlutter": "Hello, Flutter Heroes!",
-    "hello": "Whazzup, bro?"
+    "hello": "Whazzup, bro?",
+    "bye": "Bye"
 }

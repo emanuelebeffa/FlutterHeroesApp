@@ -115,6 +115,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Whazzup, bro?'**
   String get hello;
+
+  /// No description provided for @bye.
+  ///
+  /// In en, this message translates to:
+  /// **'Bye'**
+  String get bye;
 }
 
 class _AppLocalizationsDelegate

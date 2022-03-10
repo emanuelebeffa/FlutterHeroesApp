@@ -11,5 +11,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get helloFlutter => 'Ciao, Flutter Heroes!';
 
   @override
-  String get hello => 'Hello';
+  String get hello => 'Ciao';
+
+  @override
+  String get bye => 'Addio';
 }

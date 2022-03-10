@@ -1,4 +1,5 @@
 {
     "helloWorld": "Ciao, mondo!",
-    "helloFlutter": "Ciao, Flutter Heroes!"
+    "helloFlutter": "Ciao, Flutter Heroes!",
+    "hello": "Hello"
 }

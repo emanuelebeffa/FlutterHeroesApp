@@ -9,7 +9,7 @@ lane :generate_files do
 
     UI.header "Generate dart file"
     begin
-      system("flutter gen-l10n arb-dir #{config["arb-dir"]} template-arb-file #{config["template-arb-file"]} output-localization-file #{config["output-localization-file"]} output-dir #{config["output-dir"]} synthetic-package #{config["synthetic-package"]}")
+      system("flutter gen-l10n arb-dir #{config["arb-dir"]} template-arb-file #{config["template-arb-file"]} output-localization-file #{config["output-localization-file"]} output-dir #{config["output-dir"]} synthetic-package #{config["synthetic-package"]} --suppress-analytics")
       system("flutter format lib/l10n")
     rescue => exception
       UI.error exception

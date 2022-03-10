@@ -6,7 +6,7 @@ on:
       - opened
       - synchronize
     paths:
-     - "lib/l10n"
+      - "lib/l10n"
 
 concurrency: 
   group: generate-l10n-${{ github.ref }}

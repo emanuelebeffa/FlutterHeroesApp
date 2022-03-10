@@ -1,0 +1,38 @@
+require "yaml"
+require "json"
+
+lane :generate_files do
+  Dir.chdir("../") do
+    UI.header "Reading config from l10n.yaml"
+    config = YAML.load_file("l10n.yaml")
+    UI.message JSON.pretty_generate(config)
+
+    UI.header "Generate dart file"
+    begin
+      system("flutter gen-l10n arb-dir #{config["arb-dir"]} template-arb-file #{config["template-arb-file"]} output-localization-file #{config["output-localization-file"]} output-dir #{config["output-dir"]} synthetic-package #{config["synthetic-package"]}")
+      system("flutter format lib/l10n")
+    rescue => exception
+      UI.error exception
+    end
+  end
+end
+
+lane :push_changes do
+  Dir.chdir("../") do
+    branch_name = `git rev-parse --abbrev-ref HEAD`
+    branch_name = branch_name[0..-2]
+
+    begin
+      UI.header "Git add lib/l10n"
+      system("git add lib/l10n/")
+
+      UI.header "Git commit"
+      system("git commit -m 'chore: update dart translations files'")
+
+      UI.header "Git push"
+      system("git push origin #{branch_name}")
+    rescue => exception
+      UI.error exception
+    end
+  end
+end

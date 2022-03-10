@@ -1,11 +1,9 @@
 name: Generate L10n
 
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
+  push:
+    branches:
+      - "l10n_**"
     paths:
       - "lib/l10n"
 

@@ -1,10 +1,9 @@
 name: Generate L10n
 
 on:
-  push:
-    branches:
-      - "l10n_**"
-
+  pull_request:
+    paths:
+     - "lib/l10n"
 concurrency: 
   group: generate-l10n-${{ github.ref }}
   cancel-in-progress: true
@@ -31,6 +30,8 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+        run: |
+          flutter config --no-analytics
 
       - name: Install Ruby
         uses: actions/setup-ruby@v1

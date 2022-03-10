@@ -97,6 +97,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hello, world!'**
   String get helloWorld;
+
+  /// No description provided for @helloFlutter.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello, Flutter Heroes!'**
+  String get helloFlutter;
+
+  /// No description provided for @hello.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello'**
+  String get hello;
 }
 
 class _AppLocalizationsDelegate

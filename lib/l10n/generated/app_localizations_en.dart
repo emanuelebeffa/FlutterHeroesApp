@@ -6,4 +6,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helloWorld => 'Hello, world!';
+
+  @override
+  String get helloFlutter => 'Hello, Flutter Heroes!';
+
+  @override
+  String get hello => 'Hello';
 }
